@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".HomeFragment">
 
+    <EditText
+        android:id="@+id/etUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:digits="0123456789"
+        android:hint="@string/user_id"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit" />
+
+
+    <ImageView
+        android:id="@+id/imgData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@tools:sample/avatars" />
+
     <TextView
-        android:id="@+id/tvHome"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/tvData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ProgressBar
+        android:id="@+id/pbData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
